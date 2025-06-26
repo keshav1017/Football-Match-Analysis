@@ -46,7 +46,7 @@ Welcome to a cutting-edge AI project that leverages **YOLOv11**, **Optical Flow*
 
 ## 🎥 Sample Demo
 
-<img src="assets/Screenshot 2025-06-26 235421" width="600"/>
+<img src="./assets/Screenshot.png" width="600"/>
 
 ▶️ [Watch Full Video Demo](https://drive.google.com/file/d/1wODZFIo4UDRWOJiEXdg11pSWjXkWJVAe/view?usp=sharing)
 
