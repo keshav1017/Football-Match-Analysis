@@ -15,7 +15,19 @@ class Tracker:
     def __init__(self, model_path):
         self.model = YOLO(model_path) 
         self.tracker = sv.ByteTrack()
+    
+    def interpolate_ball_positions(self, ball_positions):
+        ball_positions = [x.get(1, {}).get("bbox", []) for x in ball_positions]
+        df_ball_positions = pd.DataFrame(ball_positions, columns=["x1", "y1", "x2", "y2"])
 
+        # interpolate missing values
+        df_ball_positions = df_ball_positions.interpolate()
+        df_ball_positions = df_ball_positions.bfill()
+
+        ball_positions = [{1: {"bbox": x}} for x in df_ball_positions.to_numpy().tolist()]
+
+        return ball_positions
+        
     def detect_frames(self, frames):
         batch_size=20 
         detections = [] 
@@ -149,7 +161,7 @@ class Tracker:
         for frame_num, frame in enumerate(video_frames):
             frame = frame.copy()
 
-            player_dict = tracks["players"][frame_num]
+            player_dict:dict = tracks["players"][frame_num]
             ball_dict = tracks["ball"][frame_num]
             referee_dict = tracks["referees"][frame_num]
 
@@ -157,6 +169,9 @@ class Tracker:
             for track_id, player in player_dict.items():
                 color = player.get("team_color", (0, 0, 255))
                 frame = self.draw_ellipse(frame, player["bbox"], color, track_id)
+
+                if player.get("has_ball", False):
+                    frame = self.draw_traingle(frame, player["bbox"], (0, 0, 225))
 
             # Draw Referee
             for _, referee in referee_dict.items():
