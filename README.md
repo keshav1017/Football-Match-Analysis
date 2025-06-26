@@ -25,7 +25,7 @@ Welcome to a cutting-edge AI project that leverages **YOLOv11**, **Optical Flow*
 | **KMeans Clustering**  | Grouping players by t-shirt color (team identification)  |
 | **Optical Flow**       | Frame-by-frame player movement tracking                  |
 | **Perspective Warp**   | Convert movement in pixels to meters                     |
-| **Supervision + DeepSORT** | Real-time multi-object tracking                     |
+| **Supervision + ByteTrack** | Real-time multi-object tracking                     |
 | **NumPy / Pandas**     | Fast computation and data manipulation                   |
 | **Matplotlib**         | Graphical representation of player performance           |
 
