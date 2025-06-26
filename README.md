@@ -116,8 +116,7 @@ Distributed under the MIT License. See `LICENSE` for more details.
 ## 👨‍💻 Author
 
 **Keshav Prasad**  
-🎓 Final Year CSE | 🧠 ML & MLOps Enthusiast  
-🔗 [GitHub](https://github.com/keshav1017) | [LinkedIn](https://linkedin.com/in/keshavprasad1017)
+[LinkedIn](https://linkedin.com/in/keshavprasad1017)
 
 ---
 
