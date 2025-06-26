@@ -192,7 +192,7 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
-/input_videos/
-/output_videos/
-/models/
+/input_videos/15sec_input_720p.mp4
+/output_videos/output_video.avi
+/models/best.pt
 /.vscode/
