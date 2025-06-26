@@ -77,25 +77,25 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Running the Project
+## 💻 Clone & Run Locally
+
+Follow these steps to run the project on your local machine:
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/keshav1017/football-tracking-analytics.git
+cd football-tracking-analytics
+
+# 2. (Optional) Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Run the main script
 python main.py
 ```
-
-All configuration and path settings can be modified in `config/config.yaml`.
-
----
-
-## 📈 Example Output Metrics
-
-| Player ID | Distance Covered (m) | Avg Speed (km/h) |
-|-----------|----------------------|------------------|
-| #7        | 934.7                | 13.2             |
-| #12       | 863.2                | 11.5             |
-| #4        | 1102.3               | 15.6             |
-
----
 
 ## 🤝 Contributing
 
